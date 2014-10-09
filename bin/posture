@@ -1,0 +1,11 @@
+#!/usr/bin/env ruby
+
+require 'dante'
+
+Dante::Runner.new('posture').execute(pid_path: '/tmp/posture.pid', log_path: '/tmp/posture.log') do |opts|
+  loop do
+    # system("say 'posture'")
+    system("afplay /System/Library/Sounds/Sosumi.aiff")
+    sleep(60*15)
+  end
+end
